@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hw/src/second_hw/second_homework.dart';
+import 'package:flutter_hw/src/third_hw/third_homework.dart';
 import 'src/first_homework.dart';
 
 void main() {
@@ -19,6 +20,7 @@ class MyApp extends StatelessWidget {
         routes: {
           FirstHomework.routeName: (context) => const FirstHomework(),
           SecondHomework.routeName: (context) => const SecondHomework(),
+          ThirdHomework.routeName: (context) => const ThirdHomework(),
         });
   }
 }
@@ -33,7 +35,7 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
-  List<String> items = ['homework #1', 'homework #2'];
+  List<String> items = ['homework #1', 'homework #2', 'homework #3'];
 
   void _incrementCounter() {
     setState(() {
@@ -66,8 +68,11 @@ class _MyHomePageState extends State<MyHomePage> {
       case "homework #1":
         Navigator.pushNamed(context, FirstHomework.routeName);
         break;
-        case "homework #2":
+      case "homework #2":
         Navigator.pushNamed(context, SecondHomework.routeName);
+        break;
+      case "homework #3":
+        Navigator.pushNamed(context, ThirdHomework.routeName);
         break;
     }
   }
